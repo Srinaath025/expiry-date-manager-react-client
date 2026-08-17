@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a29bfe;
+  --color-primary-hover: #6c5ce7;
+  --color-primary-light: #f3f0ff;
+  
+  --color-secondary: #fd79a8;
+  --color-secondary-hover: #e84393;
+  --color-secondary-light: #fff0f5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased min-h-screen font-sans;
+  }
+}
