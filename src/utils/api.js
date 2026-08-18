@@ -1,4 +1,5 @@
-const API_BASE = '/auth';
+const API_URL = import.meta.env.VITE_API_URL || '';
+const API_BASE = `${API_URL}/auth`;
 
 export async function loginUser({ email, password }) {
   let response;
@@ -86,7 +87,7 @@ export async function getCurrentUser() {
 
 // ─── Product API Functions ───────────────────────────────────────────────
 
-const PRODUCTS_BASE = '/products';
+const PRODUCTS_BASE = `${API_URL}/products`;
 
 export async function getProducts({ page = 1, limit = 20, search = '', category = 'all', status = 'all' } = {}) {
   const params = new URLSearchParams({
